@@ -13,19 +13,18 @@ export default class New extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
-    const data = new FormData(); // quando enviamos a requisição como multipartformdata é preciso criar um objeto data para pegar todos os dados
+    const data = new FormData();
     data.append("image", this.state.image);
     data.append("author", this.state.author);
     data.append("place", this.state.place);
     data.append("description", this.state.description);
     data.append("hashtags", this.state.hashtags);
-    await api.post("posts", data); // o objeto data contem todos os dados
-    this.props.history.push("/"); //historico de rotas do usuario e enviando para uma nova rota
+    await api.post("posts", data);
+    this.props.history.push("/");
   };
 
   handleImageChange = e => {
-    //não consigo usar a mesma função para o inpu image porque o valor dele vem em formato array
-    this.setState({ image: e.target.files[0] }); //como o image vem em array eu pego o 0 simbolizando apenas o primeiro
+    this.setState({ image: e.target.files[0] });
   };
 
   handleChange = e => {

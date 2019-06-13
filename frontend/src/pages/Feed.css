@@ -2,7 +2,7 @@ section#post-list {
   width: 100%;
   max-width: 580px;
   margin: 0 auto;
-  padding: 0 30px; /*Se a largura for muito pequena ele deixa um espaço na esquerda e na direita*/
+  padding: 0 30px;
 }
 section#post-list article {
   background: #fff;
@@ -11,14 +11,14 @@ section#post-list article {
 }
 section#post-list article header {
   padding: 20px;
-  display: flex; /*Faz o mesmo comportamento do header joga um item para um lado e o outro pro outro lado */
-  align-items: center; /*Faz o mesmo comportamento do header joga um item para um lado e o outro pro outro lado */
-  justify-content: space-between; /*Faz o mesmo comportamento do header joga um item para um lado e o outro pro outro lado */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 section#post-list article header .user-info {
   display: flex;
-  flex-direction: column; /*tudo que estiver dentro do user info vai alinhar na vertical "coluna"*/
+  flex-direction: column;
 }
 section#post-list article header .user-info span {
   font-size: 13px;
@@ -29,7 +29,6 @@ section#post-list article header .user-info span.place {
   margin-top: 3px;
 }
 section#post-list article > img {
-  /*O caracter ">" está refernciando apenas a img*/
   width: 100%;
 }
 
@@ -58,5 +57,5 @@ section#post-list article footer p {
 
 section#post-list article footer span {
   color: #7159c1;
-  display: block; /*para quebra a linha */
+  display: block;
 }
