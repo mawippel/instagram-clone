@@ -20,7 +20,7 @@ mongoose.connect(
 	{
 		useNewUrlParser: true
 	}
-);
+).then(i => console.log('MongoDB Connected'));
 
 app.use((req, res, next) => {
 	req.io = io;
